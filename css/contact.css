@@ -79,6 +79,14 @@ body.light-mode .ct-tile > span:not(.ct-soc__handle) { color: var(--light-text-p
     text-transform: uppercase;
     color: rgba(224, 224, 224, 0.42);
     transition: color 0.35s;
+    white-space: nowrap;
+}
+
+/* Reduce letter-spacing for full name handles (Facebook, LinkedIn) */
+.ct-tile--fb .ct-soc__handle,
+.ct-tile--li .ct-soc__handle {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .ct-tile:hover {
@@ -88,6 +96,12 @@ body.light-mode .ct-tile > span:not(.ct-soc__handle) { color: var(--light-text-p
 }
 
 .ct-tile:hover .ct-soc__handle { color: inherit; opacity: 0.8; }
+
+/* Keep full name handles more visible on hover */
+.ct-tile--fb:hover .ct-soc__handle,
+.ct-tile--li:hover .ct-soc__handle {
+    opacity: 0.95;
+}
 
 /* Brand hues bloom on hover (mono at rest) */
 .ct-tile--fb:hover { color: #4d9bff; }
