@@ -8,7 +8,7 @@
     --socials-ig: #e1568a;
     --socials-th: #f2f2f2;
     --socials-x: #d6d6d6;
-    --socials-dc: #7289ff;
+    --socials-tt: #fe2c55;
     --socials-li: #3d9bd6;
     /* Section accent: cyan in dark mode, the light-mode blue (#004fd2) on light theme. */
     --socials-accent: var(--brand-primary);
@@ -157,7 +157,7 @@
 }
 .socials__tile--th { --bc: var(--socials-th); --bc-glow: rgba(242, 242, 242, .28); }
 .socials__tile--x  { --bc: var(--socials-x);  --bc-glow: rgba(214, 214, 214, .26); }
-.socials__tile--dc { --bc: var(--socials-dc); --bc-glow: rgba(114, 137, 255, .4); }
+.socials__tile--tt { --bc: var(--socials-tt); --bc-glow: rgba(254, 44, 85, .4); }
 .socials__tile--li { --bc: var(--socials-li); --bc-glow: rgba(61, 155, 214, .4); }
 
 /* ═══ Light mode ═══ */
@@ -190,11 +190,12 @@ body.light-mode {
     --socials-ig: #d6249f;
     --socials-th: #101010;
     --socials-x: #0f1419;
-    --socials-dc: #5865f2;
+    --socials-tt: #000000;
     --socials-li: #0a66c2;
 }
 body.light-mode .socials__tile--th { --bc-glow: rgba(16, 16, 16, .16); }
 body.light-mode .socials__tile--x  { --bc-glow: rgba(15, 20, 25, .16); }
+body.light-mode .socials__tile--tt { --bc-glow: rgba(0, 0, 0, .2); }
 
 /* ═══ Bracket rail accents (A3) — anchored to the grid, centered on the tiles ═══ */
 .socials__grid {
