@@ -289,7 +289,7 @@ body.light-mode {
 
 /* ═══ Section pages — full roll with before/after reveals ═══ */
 .gallery-section-main {
-    max-width: 1240px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 8.5rem 2rem 4rem;
 }
