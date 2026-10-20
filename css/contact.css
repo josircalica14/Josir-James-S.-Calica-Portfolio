@@ -50,7 +50,7 @@ body.light-mode .ct-socials-head .socials__eyebrow { text-shadow: none; }
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     font-size: 0.92rem;
     letter-spacing: 0.04em;
-    transition: padding-left 0.35s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.35s, background 0.35s, color 0.35s;
+    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.35s, background 0.35s, color 0.35s;
 }
 
 .ct-tile svg {
@@ -90,7 +90,7 @@ body.light-mode .ct-tile > span:not(.ct-soc__handle) { color: var(--light-text-p
 }
 
 .ct-tile:hover {
-    padding-left: 1.15rem;
+    transform: translateX(0.75rem);
     border-bottom-color: currentColor;
     background: rgba(255, 255, 255, 0.03);
 }
@@ -292,7 +292,7 @@ body.light-mode .ct-card__inner { background: rgba(255, 255, 255, 0.6); box-shad
 
 .ct-faq summary::after {
     content: '+';
-    font-family: 'Chivo Mono Semi Bold', monospace;
+    font-family: 'NavBarFont', sans-serif;
     color: var(--brand-primary);
     margin-left: 1rem;
     transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
@@ -301,7 +301,7 @@ body.light-mode .ct-card__inner { background: rgba(255, 255, 255, 0.6); box-shad
 .ct-faq details[open] summary::after { transform: rotate(45deg); }
 
 .ct-faq details p {
-    font-family: 'Chivo Mono Semi Bold', monospace;
+    font-family: 'NavBarFont', sans-serif;
     font-size: 0.68rem;
     letter-spacing: 0.04em;
     line-height: 1.75;
@@ -394,7 +394,7 @@ body.light-mode .ct-marquee { border-block-color: rgba(0, 0, 0, 0.1); }
 }
 
 .ct-marquee__inner span {
-    font-family: 'HeroFont', sans-serif;
+    font-family: 'CardHeaderFont', sans-serif;
     font-size: clamp(2rem, 5vw, 4rem);
     margin-right: 2.6rem;
     color: var(--dark-text-primary, #e8e8e8);
@@ -436,8 +436,8 @@ body.light-mode .ct-marquee__inner span em { color: var(--brand-primary-dark); }
 }
 
 .ct-q {
-    font-family: 'HeroFont', sans-serif;
-    font-weight: 300;
+    font-family: 'Orchis Prima Regular', sans-serif;
+    font-weight: normal;
     font-size: clamp(1.5rem, 3.2vw, 2.3rem);
     line-height: 1.15;
     color: var(--dark-text-primary, #e8e8e8);
@@ -461,7 +461,7 @@ body.light-mode .ct-q em { color: var(--brand-primary-dark); }
     margin-top: 1.5rem;
     color: var(--dark-text-primary, #e8e8e8);
     caret-color: #22cdda;
-    font-family: 'HeroFont', sans-serif;
+    font-family: 'Orchis Prima Regular', sans-serif;
     font-size: clamp(1.3rem, 2.4vw, 1.8rem);
     outline: none;
     transition: border-color 0.3s cubic-bezier(0.32, 0.72, 0, 1);
@@ -483,7 +483,7 @@ body.light-mode .ct-step-input:focus { border-bottom-color: var(--brand-primary-
 
 .ct-error {
     display: none;
-    font-family: 'Chivo Mono Semi Bold', monospace;
+    font-family: 'NavBarFont', sans-serif;
     font-size: 0.68rem;
     letter-spacing: 0.08em;
     color: #ff7a7a;
@@ -562,7 +562,7 @@ body.light-mode .ct-step-back:hover { color: var(--brand-primary-dark); }
 }
 
 .ct-form-head .k {
-    font-family: 'Chivo Mono Semi Bold', monospace;
+    font-family: 'NavBarFont', sans-serif;
     font-size: 0.62rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
@@ -572,8 +572,8 @@ body.light-mode .ct-step-back:hover { color: var(--brand-primary-dark); }
 body.light-mode .ct-form-head .k { color: var(--brand-primary-dark); }
 
 .ct-form-head h2 {
-    font-family: 'HeroFont', sans-serif;
-    font-weight: 300;
+    font-family: 'Orchis Prima Regular', sans-serif;
+    font-weight: normal;
     font-size: clamp(2rem, 4.4vw, 3.2rem);
     line-height: 1.08;
     margin-top: 1.2rem;
@@ -586,7 +586,7 @@ body.light-mode .ct-form-head h2 { color: #222222; }
 
 .ct-field .ct-label {
     display: block;
-    font-family: 'Chivo Mono Semi Bold', monospace;
+    font-family: 'NavBarFont', sans-serif;
     font-size: 0.62rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -603,7 +603,7 @@ body.light-mode .ct-field .ct-label { color: var(--brand-primary-dark); }
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     padding: 1rem 0 0.85rem;
     color: var(--dark-text-primary, #e8e8e8);
-    font-family: 'HeroFont', sans-serif;
+    font-family: 'Orchis Prima Regular', sans-serif;
     font-size: clamp(1.3rem, 2.4vw, 1.9rem);
     outline: none;
     transition: border-color 0.4s cubic-bezier(0.32, 0.72, 0, 1);
@@ -621,7 +621,7 @@ body.light-mode .ct-field .big-input:focus { border-bottom-color: var(--brand-pr
 
 .ct-error {
     display: none;
-    font-family: 'Chivo Mono Semi Bold', monospace;
+    font-family: 'NavBarFont', sans-serif;
     font-size: 0.68rem;
     letter-spacing: 0.08em;
     color: #ff7a7a;
@@ -661,7 +661,7 @@ body.light-mode .ct-send:hover { background: var(--brand-primary-dark); color: #
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Chivo Mono Semi Bold', monospace;
+    font-family: 'NavBarFont', sans-serif;
 }
 
 .ct-send:hover .ct-send__icon { background: rgba(16, 35, 31, 0.14); }
@@ -669,13 +669,14 @@ body.light-mode .ct-send:hover .ct-send__icon { background: rgba(255, 255, 255, 
 
 .ct-form-note {
     margin-top: 3rem;
-    font-family: 'Chivo Mono Semi Bold', monospace;
-    font-size: 0.72rem;
+    font-family: 'NavBarFont', sans-serif;
+    font-size: 0.82rem;
     letter-spacing: 0.06em;
     color: rgba(214, 214, 214, 0.6);
 }
 
 .ct-form-note span { color: var(--brand-primary); }
+body.light-mode .ct-form-note { color: rgba(34, 34, 34, 0.7); }
 body.light-mode .ct-form-note span { color: var(--brand-primary-dark); }
 
 /* ── Mobile ── */
@@ -705,6 +706,24 @@ body.light-mode .ct-form-note span { color: var(--brand-primary-dark); }
     .ct-cta-card { width: min(340px, 92vw); padding: 0.95rem 1.1rem; gap: 1rem; }
     .ct-cta-card__txt .t { font-size: 0.92rem; }
     .ct-cta-card__txt .s { font-size: 0.55rem; letter-spacing: 0.14em; }
+}
+
+/* Extra small screens (360px and below) - prevent handle overflow */
+@media (max-width: 380px) {
+    .ct-tile .ct-soc__handle { 
+        font-size: 0.48rem; 
+        letter-spacing: 0.05em;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .ct-tile--fb .ct-soc__handle,
+    .ct-tile--li .ct-soc__handle {
+        letter-spacing: 0.04em;
+        font-size: 0.46rem;
+    }
+    .ct-hero-socials { gap: 0.35rem 0.7rem; }
+    .ct-tile { gap: 0.4rem; }
 }
 
 /* EMAIL ME — solid accent button treatment */

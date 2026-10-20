@@ -10,33 +10,61 @@
 .vscode/
 skills-lock.json
 
-# Scratch / drafts
+# Scratch / drafts / documentation
 sample code/
 server.log
+*.md
+CHANGES_SUMMARY.md
+EMAILJS_SETUP.md
+AUTO_REPLY_SETUP.md
 
-# Camera raws — the graded web versions live beside them as .webp, the
-# .ARW originals stay on disk only.
+# Test and option pages
+*-options.html
+options.html
+send-reply.html
+
+# Preview server files
+preview-server.js
+preview-server.log
+
+# Camera raw formats - only converted webp images should be pushed
 *.ARW
 *.arw
 *.DNG
 *.dng
 *.RAF
 *.raf
+*.CR2
+*.cr2
+*.NEF
+*.nef
 
-# Temporary staging folder holding the credit-bearing raws. The filenames are
-# the source of truth for the plate credits; the served images are the .webp
-# plates in assets/gallery/. Never committed.
+# Original JPG/JPEG/PNG - only converted webp should be pushed
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
+*.png
+*.PNG
+
+# Allow only webp images (force include)
+!*.webp
+
+# Temporary staging folder holding credit-bearing raws
 assets/color grading photos with credits/
-
-# Personal edits source JPEGs. The served plates are the .webp siblings in the
-# same folders, so the full resolution originals stay on disk only.
-assets/gallery/edits/before/*.jpg
-assets/gallery/edits/after/*.jpg
 
 # OS cruft
 Thumbs.db
 Desktop.ini
+.DS_Store
 
-# manually added edit-09 webp (not project output; must not be committed)
-assets/gallery/edits/after/edit-09.webp
-assets/gallery/edits/before/edit-09.webp
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Git folder
+.git/

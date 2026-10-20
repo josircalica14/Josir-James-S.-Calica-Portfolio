@@ -49,6 +49,11 @@ html {
     src: local('Chivo Mono Semi Bold'), url('./assets/fonts/ChivoMono[wght].woff') format('woff');
     }
 
+@font-face {
+    font-family: 'Orchis Prima Regular';
+    src: url(./assets/fonts/OrchisPrima-Regular.otf);
+}
+
 /* ===== CORE CSS VARIABLES - SINGLE SOURCE OF TRUTH, EASY TO UPDATE ===== */
 :root {
     /* Navbar variables - separated for independent customization */
