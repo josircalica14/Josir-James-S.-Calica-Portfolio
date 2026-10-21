@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photoshop gallery by Cup of Jay — creative photo manipulation and design work">
+    <title>Photoshop | Josir James S. Calica</title>
+    <link rel="stylesheet" href="style.css?v=19">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/gallery.css?v=22">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="theme-toggle.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark-mode';
+            document.documentElement.className = theme;
+        })();
+    </script>
+</head>
+<body class="dark-mode">
+    <!-- Mobile Navigation (outside hero so fixed positioning works correctly) -->
+    <input type="checkbox" id="mobile-nav-toggle" class="mobile-nav__checkbox">
+
+    <!-- Mobile nav frosted bar (shown on scroll) -->
+    <div class="mobile-nav__bar"></div>
+
+    <!-- Mobile Logo -->
+    <div class="mobile-logo">
+        <img class="logo-light" src="./logo/logo1v2.webp" alt="Cup of Jay">
+        <img class="logo-dark" src="./logo/logo1v1.webp" alt="Cup of Jay">
+    </div>
+
+    <!-- Mobile Burger Menu -->
+    <label for="mobile-nav-toggle" class="mobile-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Mobile Nav Backdrop -->
+    <label for="mobile-nav-toggle" class="mobile-nav__backdrop"></label>
+
+    <!-- Full-width blur strip under the scrolled navbar -->
+    <div class="nav-blur-strip" aria-hidden="true"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav__drawer" aria-label="Mobile navigation">
+        <div class="mobile-nav__header">
+            <img class="logo-light mobile-nav__header-logo" src="./logo/logo1v2.webp" alt="Cup of Jay">
+            <img class="logo-dark mobile-nav__header-logo" src="./logo/logo1v1.webp" alt="Cup of Jay">
+            <span class="mobile-nav__header-name">Cup of Jay</span>
+        </div>
+        <ul class="mobile-nav__list">
+            <!-- Rendered by js/nav.js from the single PAGES source -->
+        </ul>
+    </nav>
+
+    <!-- Desktop Navigation (outside hero so fixed positioning works correctly) -->
+    <nav class="nav" aria-label="Main navigation">
+        <!-- Logo floats above the nav, centered, out of flow -->
+        <div class="nav__logo-item">
+            <img class="nav__logo-image logo-light" src="./logo/logo1v2.webp" alt="Cup of Jay">
+            <img class="nav__logo-image logo-dark" src="./logo/logo1v1.webp" alt="Cup of Jay">
+        </div>
+        <ul class="nav__main-list">
+            <!-- Rendered by js/nav.js from the single PAGES source -->
+        </ul>
+    </nav>
+
+    <!-- Theme toggle — standalone, always visible -->
+    <div class="nav__toggle-item">
+        <div class="theme-toggle theme-toggle--nav">
+            <label class="switch" for="theme-checkbox" aria-label="Toggle theme">
+                <input type="checkbox" id="theme-checkbox" class="theme-toggle__input">
+                <span class="slider">
+                    <span class="stars">
+                        <svg class="star" viewBox="0 0 24 24"><path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/></svg>
+                        <svg class="star" viewBox="0 0 24 24"><path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/></svg>
+                        <svg class="star" viewBox="0 0 24 24"><path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/></svg>
+                        <svg class="star" viewBox="0 0 24 24"><path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/></svg>
+                        <svg class="star" viewBox="0 0 24 24"><path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/></svg>
+                    </span>
+                    <span class="moons-hole">
+                        <span class="moon-hole"></span>
+                        <span class="moon-hole"></span>
+                        <span class="moon-hole"></span>
+                    </span>
+                    <span class="black-clouds">
+                        <span class="black-cloud"></span>
+                        <span class="black-cloud"></span>
+                        <span class="black-cloud"></span>
+                    </span>
+                    <span class="clouds">
+                        <span class="cloud"></span>
+                        <span class="cloud"></span>
+                        <span class="cloud"></span>
+                        <span class="cloud"></span>
+                        <span class="cloud"></span>
+                        <span class="cloud"></span>
+                        <span class="cloud"></span>
+                        <span class="cloud"></span>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <!-- 02 — Photoshop: creative photo manipulation and design work.
+         To add a plate: copy a .ba-item figure, swap both img srcs (before first,
+         after second) and keep the two urls' dimensions identical. -->
+    <main class="gallery-section-main">
+        <div class="gallery-section__crumbs" data-reveal>
+            <a href="gallery.html">Gallery</a>
+            <span aria-hidden="true">/</span>
+            <span>02 — Photoshop</span>
+        </div>
+        <h1 class="gallery-section__title" data-reveal data-reveal-delay="1">Photoshop</h1>
+        <p class="gallery-section__intro" data-reveal data-reveal-delay="2">Creative photo manipulation and design work — where imagination meets reality.</p>
+
+        <p class="gallery-section__hint">drag a divider — before / after</p>
+
+        <div class="ba-grid" data-reveal data-reveal-delay="2">
+            <figure class="ba-item ba-item--photoshop">
+                <img src="./assets/gallery/photoshop/after/photoshop-01.webp" alt="Photoshop Work 01" width="612" height="792" loading="lazy" decoding="async">
+                <figcaption><span class="ba-item__name">Multimedia Technology 1 Finals Project</span><span class="gallery-ledger__tag">Design</span></figcaption>
+            </figure>
+            <figure class="ba-item ba-item--photoshop">
+                <img src="./assets/gallery/photoshop/after/photoshop-02.webp" alt="Photoshop Work 02" width="5400" height="7200" loading="lazy" decoding="async">
+                <figcaption><span class="ba-item__name">Mockup Portfolio Poster</span><span class="gallery-ledger__tag">Poster</span></figcaption>
+            </figure>
+            <figure class="ba-item ba-item--photoshop">
+                <img src="./assets/gallery/photoshop/after/photoshop-03.webp" alt="Photoshop Work 03" width="1920" height="1080" loading="lazy" decoding="async">
+                <figcaption><span class="ba-item__name">Personal Wallpaper (PC)</span><span class="gallery-ledger__tag">Wallpaper</span></figcaption>
+            </figure>
+            <figure class="ba-item ba-item--photoshop">
+                <img src="./assets/gallery/photoshop/after/photoshop-04.webp" alt="Photoshop Work 04" width="1080" height="1920" loading="lazy" decoding="async">
+                <figcaption><span class="ba-item__name">Yowsir Wallpaper (Mobile)</span><span class="gallery-ledger__tag">Wallpaper</span></figcaption>
+            </figure>
+            
+        </div>
+
+        <div class="gallery-section__end">
+            <a class="gallery-ledger__more" href="gallery.html">
+                <svg class="gallery-ledger__more-icon" viewBox="0 0 16 16" aria-hidden="true" style="transform: none;"><path d="M3.5 8 9 2.5l1.4 1.4L6.3 8l4.1 4.1L9 13.5Z" fill="currentColor"/></svg>
+                <span class="gallery-ledger__more-text">Back to gallery</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        © 2025 JOSIR JAMES S. CALICA
+    </footer>
+
+    <script type="module" src="main.js?v=15"></script>
+    <script src="lib/libgif.js"></script>
+    <script type="module" src="lib/web-pet-engine.js"></script>
+</body>
+</html>

@@ -573,6 +573,28 @@ body.light-mode {
     font-size: 0.58rem;
 }
 
+/* Photoshop items - simple image display without before/after slider */
+.ba-item--photoshop {
+    cursor: default;
+}
+
+.ba-item--photoshop img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ba-item--photoshop img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .ba-item--photoshop img:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
 .gallery-section__end {
     display: flex;
     justify-content: center;

@@ -1,0 +1,16 @@
+/* ═══ Site Footer ═══ */
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2.4rem 2rem 3rem;
+    text-align: center;
+    font-family: 'ProjectCardEyeBrowFont', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    color: rgba(224, 224, 224, 0.35);
+    margin-top: 4rem;
+}
+
+body.light-mode .site-footer {
+    border-top-color: rgba(0, 0, 0, 0.1);
+    color: rgba(34, 34, 34, 0.4);
+}

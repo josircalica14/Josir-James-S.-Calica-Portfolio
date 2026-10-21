@@ -266,6 +266,23 @@ body.light-mode .ap-rib i { background: var(--brand-primary-dark); }
     gap: 0.5rem;
     margin-top: 1.1rem;
 }
+
+/* Toolkit subsection labels (Tools, Languages) */
+.ap-sec .ap-sub {
+    font-family: 'NavBarFont', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(224, 224, 224, 0.6);
+    margin-top: 1.8rem;
+    margin-bottom: -0.6rem;
+}
+
+.ap-sec .ap-sub:first-of-type {
+    margin-top: 1.2rem;
+}
+
 .ap-chips span {
     font-family: 'ProjectCardEyeBrowFont', sans-serif;
     font-size: 0.62rem;
@@ -369,6 +386,10 @@ body.light-mode .about-wall .k { color: var(--brand-primary-dark); }
 body.light-mode .ap-tick { background: var(--brand-primary-dark); }
 body.light-mode .ap-sec h2 { color: #171d28; }
 body.light-mode .ap-sub { color: #455062; }
+
+body.light-mode .ap-sec .ap-sub {
+    color: rgba(34, 34, 34, 0.6);
+}
 body.light-mode .ap-list li { color: #455062; }
 body.light-mode .ap-list li::before { background: var(--brand-primary-dark); }
 body.light-mode .ap-list b { color: #171d28; }
