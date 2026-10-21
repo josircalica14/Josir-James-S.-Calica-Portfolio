@@ -300,6 +300,18 @@ body.light-mode .ap-rib i { background: var(--brand-primary-dark); }
 
 .ap-muted { color: #6e6e6e; }
 
+.ap-link {
+    color: var(--brand-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(34, 205, 218, 0.3);
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.ap-link:hover {
+    color: rgba(34, 205, 218, 1);
+    border-bottom-color: rgba(34, 205, 218, 1);
+}
+
 /* ── Two-column tablet: hero stacks, sections stay side by side ── */
 @media (max-width: 1024px) {
     .ap-hero {
@@ -380,6 +392,16 @@ body.light-mode .ap-chips span {
 body.light-mode .ap-now p { color: #455062; }
 body.light-mode .ap-now b { color: #2c3442; }
 body.light-mode .ap-muted { color: #a29a89; }
+
+body.light-mode .ap-link {
+    color: var(--brand-primary-dark);
+    border-bottom-color: rgba(0, 79, 210, 0.3);
+}
+
+body.light-mode .ap-link:hover {
+    color: rgba(0, 79, 210, 1);
+    border-bottom-color: rgba(0, 79, 210, 1);
+}
 
 /* ═══ Entrance — the whole page uses the shared scroll-reveal system
        (data-reveal in the markup, transition rules in style.css). ═══ */

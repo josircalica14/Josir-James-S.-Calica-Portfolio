@@ -263,6 +263,19 @@ body.light-mode .socials__tile--tt { --bc-glow: rgba(0, 0, 0, .2); }
     .socials__title { font-size: 1.8rem; }
 }
 
+@media (max-width: 400px) {
+    .socials__grid { 
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .socials__tile {
+        padding: 1.4rem .7rem 1.1rem;
+    }
+    .socials__handle {
+        font-size: .58rem;
+    }
+}
+
 /* ═══ Reduced motion ═══ */
 @media (prefers-reduced-motion: reduce) {
     .socials__rail::after { animation: none; }
