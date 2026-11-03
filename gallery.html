@@ -7,7 +7,7 @@
     <title>Gallery | Josir James S. Calica</title>
     <link rel="stylesheet" href="style.css?v=19">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/gallery.css?v=22">
+    <link rel="stylesheet" href="css/gallery.css?v=23">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="theme-toggle.css">
     <script>
@@ -121,8 +121,47 @@
                 <span class="gallery-header__stat"><b>5</b><span>Photoshop works</span></span>
             </div>
         </div>
-        <div class="gallery-header__media">
-            <img src="https://picsum.photos/seed/g3hero/900/640" alt="Featured edit detail">
+        <!-- Hero slideshow — one plate from each discipline below, cross-faded
+             by js/gallery-hero-slides.js. Add another <figure> and the show
+             picks it up; the dots render themselves from the figure count. -->
+        <div class="gallery-header__media" data-gallery-slides aria-roledescription="carousel" aria-label="Featured plates from each gallery section">
+            <figure class="gallery-slides__slide is-active">
+                <img src="./assets/gallery/edits/after/edit-22.webp" alt="Edit 22, a personal edit" width="2667" height="3442" fetchpriority="high" decoding="async">
+                <figcaption><span class="gallery-slides__section">Personal Edits</span><span class="gallery-slides__name">Edit 22</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/color_grading/after/color-grade-03.webp" alt="Grade 03, a cinematic color grade" width="1600" height="1067" decoding="async">
+                <figcaption><span class="gallery-slides__section">Color Grading</span><span class="gallery-slides__name">Grade 03</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/photoshop/after/photoshop-05.webp" alt="Brew &amp; Bloom Coffee Shop design" width="1080" height="1350" decoding="async">
+                <figcaption><span class="gallery-slides__section">Photoshop</span><span class="gallery-slides__name">Brew &amp; Bloom</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/edits/after/edit-18.webp" alt="Edit 18, a personal edit" width="2796" height="3350" decoding="async">
+                <figcaption><span class="gallery-slides__section">Personal Edits</span><span class="gallery-slides__name">Edit 18</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/color_grading/after/color-grade-08.webp" alt="Grade 08, a film color grade" width="1068" height="1600" decoding="async">
+                <figcaption><span class="gallery-slides__section">Color Grading</span><span class="gallery-slides__name">Grade 08</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/photoshop/after/photoshop-03.webp" alt="Personal Wallpaper design for PC" width="1920" height="1080" decoding="async">
+                <figcaption><span class="gallery-slides__section">Photoshop</span><span class="gallery-slides__name">Personal Wallpaper</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/edits/after/edit-19.webp" alt="Edit 19, a personal edit" width="2668" height="3557" decoding="async">
+                <figcaption><span class="gallery-slides__section">Personal Edits</span><span class="gallery-slides__name">Edit 19</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/color_grading/after/color-grade-01.webp" alt="Grade 01, a color grade" width="1600" height="1099" decoding="async">
+                <figcaption><span class="gallery-slides__section">Color Grading</span><span class="gallery-slides__name">Grade 01</span></figcaption>
+            </figure>
+            <figure class="gallery-slides__slide">
+                <img src="./assets/gallery/photoshop/after/photoshop-01.webp" alt="Multimedia Technology 1 finals project design" width="612" height="792" decoding="async">
+                <figcaption><span class="gallery-slides__section">Photoshop</span><span class="gallery-slides__name">Finals Project</span></figcaption>
+            </figure>
+            <div class="gallery-slides__dots" role="tablist" aria-label="Featured plates"></div>
         </div>
     </header>
 
@@ -255,7 +294,7 @@
 
     <footer class="gallery-footer site-footer">© 2025 JOSIR JAMES S. CALICA</footer>
 
-    <script type="module" src="main.js?v=15"></script>
+    <script type="module" src="main.js?v=16"></script>
     <script src="lib/libgif.js"></script>
     <script type="module" src="lib/web-pet-engine.js"></script>
 </body>

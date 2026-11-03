@@ -83,6 +83,7 @@ body.light-mode {
 }
 
 .gallery-header__media {
+    position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
     aspect-ratio: 9 / 6.4;
@@ -94,6 +95,87 @@ body.light-mode {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* --- Hero slideshow: one plate per discipline, cross-faded ---
+   Slides stack absolutely inside the media box; only .is-active is opaque, so
+   each swap is a straight opacity cross-fade and the box never changes size. */
+.gallery-slides__slide {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
+}
+
+.gallery-slides__slide.is-active {
+    opacity: 1;
+}
+
+.gallery-slides__slide figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.15rem 0.7rem;
+    padding: 2.8rem 3.4rem 0.95rem 1.1rem;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78));
+    font-family: var(--gallery-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.gallery-slides__section {
+    color: var(--gallery-accent);
+    text-shadow: 0 0 12px var(--gallery-accent-soft);
+}
+
+.gallery-slides__name {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+/* Dots — short ticks that grow and take the accent when active */
+.gallery-slides__dots {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.05rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.gallery-slides__dot {
+    width: 16px;
+    height: 3px;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.gallery-slides__dot.is-active {
+    width: 28px;
+    background: var(--gallery-accent);
+}
+
+.gallery-slides__dot:focus-visible {
+    outline: 2px solid var(--gallery-accent);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-slides__slide,
+    .gallery-slides__dot {
+        transition: none;
+    }
 }
 
 /* ===== Ledger sections ===== */
@@ -686,6 +768,22 @@ body.light-mode .gallery-header__stat span {
 body.light-mode .gallery-header__media {
     border-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+}
+
+body.light-mode .gallery-slides__slide figcaption {
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.94));
+}
+
+body.light-mode .gallery-slides__name {
+    color: rgba(34, 34, 34, 0.6);
+}
+
+body.light-mode .gallery-slides__dot {
+    background: rgba(0, 0, 0, 0.22);
+}
+
+body.light-mode .gallery-slides__dot.is-active {
+    background: var(--gallery-accent);
 }
 
 body.light-mode .gallery-ledger__section {
