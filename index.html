@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/about.css?v=25">
     <link rel="stylesheet" href="css/edits.css?v=19">
     <link rel="stylesheet" href="css/socials.css?v=7">
-    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="stylesheet" href="css/certifications.css?v=12">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="theme-toggle.css">
     <title>Josir James S. Calica | Front-end Developer & Photo Editor</title>
@@ -71,7 +71,7 @@
         </ul>
     </nav>
 
-    <!-- Theme toggle — standalone, always visible -->
+    <!-- Theme toggle â€” standalone, always visible -->
     <div class="nav__toggle-item">
         <div class="theme-toggle theme-toggle--nav">
             <label class="switch" for="theme-checkbox" aria-label="Toggle theme">
@@ -178,9 +178,9 @@
 
     <hr class="section-separator">
 
-    <!-- About Section — A2: photo column + neon seam + corner brackets -->
+    <!-- About Section â€” A2: photo column + neon seam + corner brackets -->
     <section class="about-section" data-reveal>
-        <!-- Corner step lines (C6): stepped 90° polylines at top-left +
+        <!-- Corner step lines (C6): stepped 90Â° polylines at top-left +
              bottom-right, echoing the photo frame's corner brackets at
              section scale. aria-hidden + pointer-events none. -->
         <div class="about-corners" aria-hidden="true">
@@ -233,7 +233,7 @@
                         <span class="spotlight__eyebrow">Featured Project</span>
                         <h3 class="spotlight__title"></h3>
                         <p class="spotlight__caption"></p>
-                        <a class="spotlight__cta" href="#">View Project →</a>
+                        <a class="spotlight__cta" href="#">View Project â†’</a>
                     </div>
                 </div>
                 <div class="spotlight__controls">
@@ -241,7 +241,7 @@
                     <div class="spotlight__thumbs"></div>
                 </div>
 
-                <!-- Project data — add a new template here and the spotlight picks it up automatically -->
+                <!-- Project data â€” add a new template here and the spotlight picks it up automatically -->
                 <template class="spotlight-slide" data-title="ScanPasada" data-caption="A Jeepney Terminal Queueing System Mobile App">
                     <img src="./assets/scanpasada_photos/banner2.webp" alt="ScanPasada app preview">
                     <a href="scanpasada.html">View Project</a>
@@ -256,7 +256,7 @@
 
     <hr class="section-separator">
 
-    <!-- Edits Gallery — V4 "Contact Sheet": stacked photo deck of featured edits.
+    <!-- Edits Gallery â€” V4 "Contact Sheet": stacked photo deck of featured edits.
          Portrait edits get class="edits-gallery__slide edits-gallery__slide--portrait",
          landscape edits just class="edits-gallery__slide". -->
     <section class="edits-gallery" id="edits-gallery" data-reveal>
@@ -351,7 +351,7 @@
 
     <hr class="section-separator">
 
-    <!-- ═══ My Socials ═══
+    <!-- â•â•â• My Socials â•â•â•
          Replace the # hrefs with the real profile URLs when ready. -->
     <section class="socials" id="socials" aria-label="My socials">
         <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -415,7 +415,7 @@
 
     <hr class="section-separator">
 
-    <!-- ═══ Certifications and Personal Development ═══ -->
+    <!-- â•â•â• Certifications and Personal Development â•â•â• -->
     <section class="certifications" id="certifications" aria-label="Certifications and Personal Development" data-reveal>
         <div class="certifications__head">
             <span class="certifications__eyebrow">Professional Growth</span>
@@ -428,7 +428,7 @@
             <div class="certifications__content">
                 <a href="https://www.credly.com/badges/b1ab65d5-b984-4219-866f-161d430f04bd/public_url" target="_blank" rel="noopener noreferrer" class="cert-card">
                     <div class="cert-card__image">
-                        <img src="./assets/certificate_&_personal_development/information-technology-fundamentals.png" alt="Information Technology Fundamentals Certificate" width="300" height="300">
+                        <img src="./assets/certs/information-technology-fundamentals.png" alt="Information Technology Fundamentals Certificate" width="300" height="300">
                     </div>
                     <div class="cert-card__content">
                         <h3 class="cert-card__title">Information Technology Fundamentals</h3>
@@ -436,6 +436,25 @@
                         <span class="cert-card__link">View Credential →</span>
                     </div>
                 </a>
+                <a href="./view-cert.html?file=assets/certs/tesda-nc3-vgd.pdf&amp;img=assets/certs/tesda-nc3-vgd.jpg&amp;title=NC+III+%E2%80%94+Developing+Designs+for+Print+Media" class="cert-card cert-card--tesda">
+                    <div class="cert-card__image">
+                        <img src="./assets/certs/tesda-nc3-vgd.jpg" alt="e-TESDA NC III VGD Certificate" width="300" height="300">
+                    </div>
+                    <div class="cert-card__content">
+                        <h3 class="cert-card__title">NC III — Developing Designs for Print Media</h3>
+                        <p class="cert-card__issuer">e-TESDA</p>
+                        <span class="cert-card__link">View Certificate →</span>
+                    </div>
+                </a>
+                <div class="cert-card cert-card--event cert-card--wide">
+                    <div class="cert-card__image">
+                        <img src="./assets/certs/pexels-the-level-up-photography-series-certificate.png" alt="Pexels The Level Up Photography Series Certificate" width="800" height="1760" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cert-card__content">
+                        <h3 class="cert-card__title">Pexel's the Level Up<br>Photography Series</h3>
+                        <p class="cert-card__issuer">Pexels</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -445,7 +464,7 @@
             <div class="certifications__content">
                 <div class="cert-card cert-card--event">
                     <div class="cert-card__image">
-                        <img src="./assets/certificate_&_personal_development/campus_devcon_2023.png" alt="Campus DEVCON Summit San Pedro 2023" width="300" height="300">
+                        <img src="./assets/certs/campus_devcon_2023.png" alt="Campus DEVCON Summit San Pedro 2023" width="300" height="300">
                     </div>
                     <div class="cert-card__content">
                         <h3 class="cert-card__title">Campus DEVCON Summit San Pedro 2023</h3>
@@ -454,7 +473,7 @@
                 </div>
                 <div class="cert-card cert-card--event">
                     <div class="cert-card__image">
-                        <img src="./assets/certificate_&_personal_development/internet_of_things_2023.png" alt="Internet of Things (IoT) Conference 2023" width="300" height="300">
+                        <img src="./assets/certs/internet_of_things_2023.png" alt="Internet of Things (IoT) Conference 2023" width="300" height="300">
                     </div>
                     <div class="cert-card__content">
                         <h3 class="cert-card__title">Internet of Things (IoT) Conference 2023 by Pocketworx</h3>
@@ -466,7 +485,7 @@
     </section>
 
     <footer class="site-footer">
-        © 2025 JOSIR JAMES S. CALICA
+        Â© 2025 JOSIR JAMES S. CALICA
     </footer>
 
     <script type="module" src="main.js?v=16"></script>
@@ -474,3 +493,4 @@
     <script type="module" src="lib/web-pet-engine.js"></script>
 </body>
 </html>
+
