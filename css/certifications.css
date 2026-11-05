@@ -121,8 +121,9 @@ body.light-mode .certifications__subtitle::after {
     width: 180px;
     height: 180px;
     margin-bottom: 1.5rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
+    border-radius: 0.75rem;
+    /* visible so the image's drop shadow isn't clipped */
+    overflow: visible;
     transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
     display: flex;
     align-items: center;
@@ -143,8 +144,9 @@ body.light-mode .certifications__subtitle::after {
     object-fit: contain;
     display: block;
     box-sizing: border-box;
-    border: 2px solid rgba(34, 205, 218, 1);
-    border-radius: 0.5rem;
+    border: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 /* Slightly larger image area for the framed certificate/badge previews */
@@ -164,29 +166,32 @@ body.light-mode .certifications__subtitle::after {
 }
 
 body.light-mode .cert-card__image img {
-    border-color: rgba(0, 79, 210, 1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Event images - rounded corners and background */
 .cert-card--event .cert-card__image {
     background: #ffffff;
-    border: 2px solid rgba(34, 205, 218, 1);
+    border: 0;
+    border-radius: 0.9rem;
     padding: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .cert-card--event:not(.cert-card--wide) .cert-card__image img {
-    border-radius: 0.5rem;
+    border-radius: 0.55rem;
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    /* the mat itself is already framed */
+    /* the mat itself is already elevated — no second shadow inside it */
     border: 0;
+    box-shadow: none;
 }
 
 body.light-mode .cert-card--event .cert-card__image {
     background: #ffffff;
-    border-color: rgba(0, 79, 210, 1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* ═══ Landscape certificate — two columns ═══
@@ -214,8 +219,9 @@ body.light-mode .cert-card--event .cert-card__image {
     padding: 0;
     background: none;
     border: 0;
-    border-radius: 0.4rem;
-    overflow: hidden;
+    border-radius: 0.75rem;
+    /* the print carries its own shadow */
+    box-shadow: none;
 }
 
 .cert-card--wide .cert-card__image img {
@@ -227,14 +233,15 @@ body.light-mode .cert-card--event .cert-card__image {
     max-height: 340px;
     object-fit: contain;
     /* the share graphic has transparent rounded corners — fill them with its
-       own backdrop so the frame shows no light gaps inside the border */
+       own backdrop so the rounded edges never reveal the card behind */
     background: #191919;
-    border: 2px solid rgba(34, 205, 218, 1);
-    border-radius: 0.5rem;
+    border: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 body.light-mode .cert-card--wide .cert-card__image img {
-    border-color: rgba(0, 79, 210, 1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .cert-card--wide .cert-card__content {
