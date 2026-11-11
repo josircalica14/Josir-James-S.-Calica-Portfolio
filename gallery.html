@@ -7,7 +7,7 @@
     <title>Gallery | Josir James S. Calica</title>
     <link rel="stylesheet" href="style.css?v=19">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/gallery.css?v=23">
+    <link rel="stylesheet" href="css/gallery.css?v=32">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="theme-toggle.css">
     <script>
@@ -115,10 +115,11 @@
             <h1 class="gallery-header__title">My Gallery</h1>
             <p class="gallery-header__subtitle">Everything I have shot and edited so far, gathered in one place. Every plate below opens into a drag to compare the raw frame against the finished edit, and each discipline keeps its own page with the full roll.</p>
             <div class="gallery-header__stats">
-                <span class="gallery-header__stat"><b>37</b><span>Plates</span></span>
+                <span class="gallery-header__stat"><b>38</b><span>Plates</span></span>
                 <span class="gallery-header__stat"><b>22</b><span>Personal edits</span></span>
                 <span class="gallery-header__stat"><b>9</b><span>Color grades</span></span>
                 <span class="gallery-header__stat"><b>5</b><span>Photoshop works</span></span>
+                <span class="gallery-header__stat"><b>2</b><span>Video edits</span></span>
             </div>
         </div>
         <!-- Hero slideshow — one plate from each discipline below, cross-faded
@@ -290,11 +291,66 @@
                 </a>
             </div>
         </section>
+
+        <!-- 04 — Video Edits -->
+        <section class="gallery-ledger__section" data-reveal id="video-edits">
+            <aside class="gallery-ledger__label">
+                <span class="gallery-ledger__num">04 / VIDEO EDITS</span>
+                <h2>Video Edits</h2>
+                <p>Footage cut into stories — pacing, sound, and a broadcast-style title card.</p>
+                <p class="gallery-ledger__meta"><span><b>Edited in</b> CapCut</span></p>
+                <span class="gallery-ledger__line" aria-hidden="true"></span>
+            </aside>
+            <div class="gallery-ledger__reels">
+                <!-- Vertical Short, self-hosted. YouTube's embed player refuses this
+                     clip, so the MP4 lives in assets/video and plays in a native
+                     <video> element. preload="none" keeps the file off the network
+                     until the play badge is pressed. Swap the file name below to
+                     change the clip; .gallery-ledger__player still holds an iframe
+                     if this ever goes back to a YouTube embed. -->
+                <figure class="gallery-ledger__reel gallery-ledger__reel--short">
+                    <div class="gallery-ledger__short" data-short-player>
+                        <video
+                            class="gallery-ledger__short-video"
+                            poster="./assets/video/cup-of-jay-short-poster.webp"
+                            width="1080" height="1920"
+                            controls playsinline preload="none">
+                            <source src="./assets/video/cup-of-jay-edit.mp4" type="video/mp4">
+                            <p class="gallery-ledger__short-fallback">This video can't play here.
+                                <a href="https://youtube.com/shorts/CeOCmpz-mIA">Watch it on YouTube</a>.</p>
+                        </video>
+                        <button class="gallery-ledger__short-play" type="button"
+                                data-short-play aria-label="Play Cup of Jay Edits"></button>
+                    </div>
+                    <figcaption>
+                        <span class="gallery-ledger__reel-title">Cup of Jay Edits</span>
+                        <span class="gallery-ledger__tag">Edited in CapCut</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-ledger__reel">
+                    <div class="gallery-ledger__player">
+                        <!-- Unlisted YouTube video. To swap clips, change the ID here. -->
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/sWgai_fY40c?rel=0"
+                            title="BSIT News"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                    </div>
+                    <figcaption>
+                        <span class="gallery-ledger__reel-title">BSIT News</span>
+                        <span class="gallery-ledger__tag">Edited in CapCut</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
 
     <footer class="gallery-footer site-footer">© 2025 JOSIR JAMES S. CALICA</footer>
 
-    <script type="module" src="main.js?v=16"></script>
+    <script type="module" src="main.js?v=17"></script>
     <script src="lib/libgif.js"></script>
     <script type="module" src="lib/web-pet-engine.js"></script>
 </body>
