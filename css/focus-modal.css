@@ -1,0 +1,210 @@
+/* ═══ Focus view — full-size overlay for a single plate ═══
+   Clicking a plate on the gallery or a section page opens it here. The overlay
+   reuses the .ba compare plate from gallery.css, so the wipe behaves exactly as
+   it does inline; this file only supplies the shell, the sizing and the trigger
+   affordances. */
+
+/* ── Triggers ──
+   Plates read as clickable without stealing the drag gesture: the pointer stays
+   default inside a .ba (it is a wipe), and the ring appears on keyboard focus. */
+.is-focus-trigger {
+    cursor: pointer;
+}
+
+.gallery-ledger__print.is-focus-trigger img {
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), filter 0.3s ease;
+}
+
+.gallery-ledger__print.is-focus-trigger:hover img {
+    transform: scale(1.02);
+}
+
+.gallery-ledger__print.is-focus-trigger:focus-visible,
+.ba-item.is-focus-trigger:focus-visible {
+    outline: 2px solid var(--gallery-accent);
+    outline-offset: 4px;
+}
+
+/* ── Overlay shell ── */
+.focus-modal {
+    position: fixed;
+    inset: 0;
+    /* Above the whole nav stack — .nav 6000, blur strip 9700, mobile bar 9980,
+       drawer 9990/9995, mobile backdrop 10000 — so the dimmed backdrop covers
+       the floating navbar instead of the navbar floating over the photo. */
+    z-index: 10050;
+    display: grid;
+    place-items: center;
+    padding: clamp(1rem, 3vw, 2.5rem);
+}
+
+.focus-modal[hidden] {
+    display: none;
+}
+
+.focus-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 8, 10, 0.84);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.24s ease;
+}
+
+.focus-modal.is-open .focus-modal__backdrop {
+    opacity: 1;
+}
+
+.focus-modal__dialog {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(10px) scale(0.985);
+    opacity: 0;
+    transition: transform 0.28s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.24s ease;
+}
+
+.focus-modal.is-open .focus-modal__dialog {
+    transform: none;
+    opacity: 1;
+}
+
+/* The dialog only takes focus programmatically, to hand it to the overlay's
+   contents in order — it never shows a ring of its own. */
+.focus-modal__dialog:focus {
+    outline: none;
+}
+
+/* Title on top, image in the middle, close button underneath — a single
+   centred column so everything lines up with the plate's width. */
+.focus-modal__figure {
+    margin: 0;
+    display: grid;
+    gap: 0.9rem;
+    justify-items: center;
+}
+
+/* The stage shrinks to the plate so the overlay stays centred on the image. */
+.focus-modal__stage {
+    position: relative;
+    display: inline-grid;
+}
+
+.focus-modal__slot {
+    display: grid;
+}
+
+/* The plate sizes itself from the viewport: as wide as the window allows, and
+   never taller than the space the title and the close button leave. A tall
+   portrait frame and a wide landscape one both land fully on screen. */
+.focus-modal__plate {
+    --shot-ratio: 0.75;
+    width: min(94vw, calc((100vh - 15rem) * var(--shot-ratio)));
+    max-height: calc(100vh - 15rem);
+    margin: 0;
+    border-radius: 6px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+}
+
+.focus-modal__caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.45rem 0.8rem;
+    max-width: 94vw;
+    font-family: 'ProjectCardTagsFont', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #eef1f3;
+    text-align: center;
+}
+
+.focus-modal__tag {
+    font-size: 0.6rem;
+}
+
+.focus-modal__tag[hidden] {
+    display: none;
+}
+
+/* Close sits below the image as a labelled pill, centred under the plate. */
+.focus-modal__close {
+    padding: 0.62rem 1.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(10, 12, 14, 0.62);
+    color: #fff;
+    font-family: 'ProjectCardTagsFont', sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.focus-modal__close:hover,
+.focus-modal__close:focus-visible {
+    background: var(--gallery-accent);
+    border-color: var(--gallery-accent);
+    color: var(--gallery-on-accent, #0e2a2d);
+    outline: none;
+}
+
+/* Scrolling the page behind the overlay would feel broken */
+body.focus-modal-open {
+    overflow: hidden;
+}
+
+/* ── Narrow screens ──
+   Height is the scarce dimension in portrait, so the plate takes the width and
+   the title/button sit closer. */
+@media (max-width: 600px) {
+    .focus-modal {
+        padding: 0.85rem;
+    }
+
+    .focus-modal__figure {
+        gap: 0.7rem;
+    }
+
+    .focus-modal__plate {
+        width: min(94vw, calc((100vh - 11rem) * var(--shot-ratio)));
+        max-height: calc(100vh - 11rem);
+    }
+
+    .focus-modal__caption {
+        font-size: 0.62rem;
+        letter-spacing: 0.18em;
+    }
+
+    .focus-modal__close {
+        padding: 0.55rem 1.4rem;
+        font-size: 0.6rem;
+    }
+}
+
+/* ═══ Reduced motion ═══ */
+@media (prefers-reduced-motion: reduce) {
+    .focus-modal__backdrop,
+    .focus-modal__dialog,
+    .focus-modal__close,
+    .gallery-ledger__print.is-focus-trigger img {
+        transition: none;
+    }
+
+    .focus-modal__dialog {
+        transform: none;
+    }
+
+    .gallery-ledger__print.is-focus-trigger:hover img {
+        transform: none;
+    }
+}
